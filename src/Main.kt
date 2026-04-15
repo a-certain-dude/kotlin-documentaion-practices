@@ -5,4 +5,6 @@ fun main() {
     Loops.whileLoop()
     println()
     Loops.doWhileLoop()
+    println()
+    Loops.forLoopFizzBuzz()
 }
