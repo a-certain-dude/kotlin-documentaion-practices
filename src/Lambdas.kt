@@ -44,5 +44,26 @@ object Lambdas {
         "$prefix/$ID/$it\n\n"
     }
 
+    /*Exercise 2
+    Write a function that takes an
+    Int value and an action (a function with type () -> Unit) which then repeats
+    the action the given number of times. Then use this function
+    to print “Hello” 5 times.*/
+
+    fun customRepeat(value: Int, action: () -> Unit) {
+        for (i in 1..value) {
+            print("$i ")
+            action()
+        }
+    }
+
+    fun invokeCustomRepeat() {
+        customRepeat(value = 5, action = { println("Hello") })
+        println()
+        customRepeat(value = 5) {
+            println("Hello World")
+        }
+    }
+
 
 }
