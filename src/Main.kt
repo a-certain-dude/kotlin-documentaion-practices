@@ -17,4 +17,6 @@ fun main() {
     Functions.main()
     println()
     println(Lambdas.urls)
+    println()
+    Lambdas.invokeCustomRepeat()
 }
