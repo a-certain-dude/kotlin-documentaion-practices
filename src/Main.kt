@@ -15,4 +15,6 @@ fun main() {
     println(Functions.circleAreaSingleExpression(5))
     println()
     Functions.main()
+    println()
+    println(Lambdas.urls)
 }
