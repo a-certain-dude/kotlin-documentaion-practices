@@ -61,4 +61,17 @@ object Loops {
         }
     }
 
+    /*Exercise 3
+     You have a list of words.
+     Use for and if to print only the words that start with the letter l.*/
+
+    fun findLetterL(){
+        val words = listOf("dinosaur","magazine","language","limousine","Laziness")
+        for (word in words){
+            if (word.startsWith("l")){
+                println(word)
+            }
+        }
+    }
+
 }
