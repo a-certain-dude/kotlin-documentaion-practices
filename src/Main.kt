@@ -11,4 +11,8 @@ fun main() {
     Loops.findLetterL()
     println()
     println(Functions.circleArea(2))
+    println()
+    println(Functions.circleAreaSingleExpression(5))
+    println()
+    Functions.main()
 }
