@@ -9,4 +9,6 @@ fun main() {
     Loops.forLoopFizzBuzz()*/
     println()
     Loops.findLetterL()
+    println()
+    println(Functions.circleArea(2))
 }
