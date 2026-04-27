@@ -32,6 +32,9 @@ object Classes {
             Address(streetName = "Asato Community Center", city = Location(city = "Asato", suburb = "Wawaso"))
         )
 
+        println(firstPerson.name.firstName + " " + firstPerson.name.lastName)
+        println()
+        println(secondPerson.name.firstName + " " + secondPerson.name.lastName)
 
     }
 
