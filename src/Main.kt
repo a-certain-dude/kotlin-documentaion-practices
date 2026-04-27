@@ -20,8 +20,9 @@ fun main() {
     println()
     Lambdas.invokeCustomRepeat()
     println()
+    val employee = Classes.Employee("Osei", 35)
+    employee.salary += 10
+    println(employee.name + " " + employee.salary)
     println()
-    val employee = Classes.Employee("Osei",35)
-    employee.salary+=10
-    println(employee.name +" "+employee.salary )
+    Classes.main()
 }
