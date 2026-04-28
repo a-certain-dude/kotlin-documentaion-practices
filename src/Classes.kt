@@ -1,3 +1,5 @@
+import kotlin.random.Random
+
 /*
 Exercise 1
 Define a data class Employee with two properties: one for a name,
@@ -36,6 +38,29 @@ object Classes {
         println()
         println(secondPerson.name.firstName + " " + secondPerson.name.lastName)
 
+    }
+
+}
+
+/*Exercise 3
+To test your code, you need a generator that can create random employees.
+Define a RandomEmployeeGenerator class with a fixed list of potential names (inside
+the class body).
+Configure the class with a minimum and maximum salary (inside the class header).
+In the class body, define the generateEmployee() function. Once
+again, the main function demonstrates how you can use this class.
+In this exercise, you import a package so that you can use the Random.nextInt()
+function. For more information about importing packages, see Package and imports.
+Hint 1
+Lists have an extension function called .random() that returns a random item within a list.
+Hint 2
+Random.nextInt(from = ..., until = ...) gives you a random Int number within specified limits.
+*/
+class RandomEmployeeGenerator(var minSalary: Int, var maxSalary: Int) {
+    val names = listOf("Mensah", "Yaw", "Kwame Bonsu", "Kwamena Kantanko", "Ogyeabour", "Boakye", "Apeagyei")
+    fun generateEmployee(){
+        val random = names.random()
+            print(random)
     }
 
 }
