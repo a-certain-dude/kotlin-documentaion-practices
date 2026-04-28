@@ -7,7 +7,7 @@ fun main() {
     Loops.doWhileLoop()
     println()
     Loops.forLoopFizzBuzz()*/
-    println()
+ /*   println()
     Loops.findLetterL()
     println()
     println(Functions.circleArea(2))
@@ -24,8 +24,8 @@ fun main() {
     employee.salary += 10
     println(employee.name + " " + employee.salary)
     println()
-    Classes.main()
-    val rand = RandomEmployeeGenerator(10,10)
+    Classes.main()*/
+    val rand = RandomEmployeeGenerator(10,30)
     println(rand.generateEmployee())
     println(rand.minSalary)
     println(rand.maxSalary)

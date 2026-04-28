@@ -57,10 +57,32 @@ Hint 2
 Random.nextInt(from = ..., until = ...) gives you a random Int number within specified limits.
 */
 class RandomEmployeeGenerator(var minSalary: Int, var maxSalary: Int) {
-    val names = listOf("Mensah", "Yaw", "Kwame Bonsu", "Kwamena Kantanko", "Ogyeabour", "Boakye", "Apeagyei")
-    fun generateEmployee(){
-        val random = names.random()
-            print(random)
+
+    data class Employee(val name: String, val salary: Int)
+
+    val names = listOf(
+        "Mensah",
+        "Mensah",
+        "Yaw",
+        "Kwame Bonsu",
+        "Kwamena Kantanko",
+        "Ogyeabour",
+        "Boakye",
+        "Apeagyei"
+    )
+
+
+    val emp = Employee(name = names.random(), salary = Random.nextInt(minSalary, maxSalary))
+
+    /*printing Employee directly without instantiating prints class names and parameters*/
+    /*printing from Unit function prints kotlin.Unit which irritates me a lot*/
+    fun generateEmployee(): String {
+        return (
+                """
+            name : ${emp.name}
+            salary : ${emp.salary}
+            """.trimIndent()
+                )
     }
 
 }
