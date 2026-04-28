@@ -25,8 +25,13 @@ fun main() {
     println(employee.name + " " + employee.salary)
     println()
     Classes.main()*/
-    val rand = RandomEmployeeGenerator(10,30)
+    /*val rand = RandomEmployeeGenerator(10,30)
     println(rand.generateEmployee())
     println(rand.minSalary)
-    println(rand.maxSalary)
+    println(rand.maxSalary)*/
+    println()
+    val salary = salaryById(8)
+    println(salary)
+
+
 }
