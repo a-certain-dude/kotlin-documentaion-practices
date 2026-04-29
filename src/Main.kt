@@ -1,3 +1,5 @@
+import ExtensionFunctions.isPositive
+
 fun main() {
     /*Conditionals.ifCondition()
     Conditionals.whenCondition()
@@ -33,6 +35,8 @@ fun main() {
     val salary = salaryById(8)
     println(salary)
     println((1..5).sumOf { id -> salaryById(id) })
+    println()
+    println((-7).isPositive())
 
 
 }
