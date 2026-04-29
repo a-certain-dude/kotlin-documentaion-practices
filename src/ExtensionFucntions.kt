@@ -4,16 +4,14 @@ Write an extension function called isPositive that takes an integer and checks w
 it is positive.
 */
 
-object ExtensionFunctions {
-    fun Int.isPositive() =
-        if (this < 0)
-            println("$this is Negative ") else println("$this Positive")
+fun Int.isPositive() =
+    if (this < 0)
+        println("$this is Negative ") else println("$this Positive")
 
-    /*"this" value represents the receiver which is Int */
+/*"this" value represents the receiver which is Int */
 
-    fun Int.isPositiveCheck(): Boolean {
-        return this < 0
-    }
+fun Int.isPositiveCheck(): Boolean {
+    return this < 0
 }
 
 

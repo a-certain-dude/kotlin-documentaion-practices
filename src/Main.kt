@@ -1,5 +1,3 @@
-import ExtensionFunctions.isPositive
-
 fun main() {
     /*Conditionals.ifCondition()
     Conditionals.whenCondition()
@@ -36,7 +34,8 @@ fun main() {
     println(salary)
     println((1..5).sumOf { id -> salaryById(id) })
     println()
-    println((-7).isPositive())
+    println(2.isPositive())
+    println((-7).isPositiveCheck())
 
 
 }
