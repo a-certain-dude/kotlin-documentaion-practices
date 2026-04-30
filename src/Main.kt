@@ -36,6 +36,8 @@ fun main() {
     println()
     println(2.isPositive())
     println((-7).isPositiveCheck())
+    println()
+    println("JOSEPH".toLowerCaseString())
 
 
 }

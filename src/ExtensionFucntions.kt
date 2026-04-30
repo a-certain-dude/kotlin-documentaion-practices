@@ -14,4 +14,11 @@ fun Int.isPositiveCheck(): Boolean {
     return this < 0
 }
 
+/*Exercise 2
+Write an extension function called toLowercaseString that takes a string and returns a
+lowercase version.
+Hint
+Use the .lowercase() function for the String type.*/
+
+fun String.toLowerCaseString() = this.lowercase()
 
