@@ -6,8 +6,8 @@ fun main() {
     println()
     Loops.doWhileLoop()
     println()
-    Loops.forLoopFizzBuzz()*/
-    /*   println()
+    Loops.forLoopFizzBuzz()
+       println()
        Loops.findLetterL()
        println()
        println(Functions.circleArea(2))
@@ -24,11 +24,11 @@ fun main() {
        employee.salary += 10
        println(employee.name + " " + employee.salary)
        println()
-       Classes.main()*/
-    /*val rand = RandomEmployeeGenerator(10,30)
+       Classes.main()
+    val rand = RandomEmployeeGenerator(10,30)
     println(rand.generateEmployee())
     println(rand.minSalary)
-    println(rand.maxSalary)*/
+    println(rand.maxSalary)
     println()
     val salary = salaryById(8)
     println(salary)
@@ -64,13 +64,26 @@ fun main() {
 
     println()
     println("secondary")
-    val secondaryBufferBackedCanvas /*receiver object*/  = Canvas()
+    val secondaryBufferBackedCanvas *//*receiver object*//*  = Canvas()
     with(secondaryBufferBackedCanvas){
         rect(x = 10, y = 10, w = 5, h = 8)
         circ(x = 10, y = 10, r = 5)
         text(x = 10, y = 10, str = "Kwame")
         rect(10,4,7,8)
         println("receiver : $this")
+    }*/
+
+    val product = Product()
+    val priceInEuros = product.getPriceInEurosS()
+
+    /* if (priceInEuros != null)
+         println("Price in Euros: $priceInEuros")
+     else
+         println("Price info not available")
+ */
+
+    val check = priceInEuros?.let {
+        println("Price in Euros: $it")
     }
 
 }
