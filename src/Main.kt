@@ -1,3 +1,6 @@
+import scopefunctions.Product
+import scopefunctions.getPriceInEurosS
+
 fun main() {
     /*Conditionals.ifCondition()
     Conditionals.whenCondition()
