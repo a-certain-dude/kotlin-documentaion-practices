@@ -5,8 +5,10 @@ class Canvas {
     fun drawSquare() = println("�� Drawing a square")
 }
 
+/*lambda expression with receiver*/
 fun renderShapesOfCanvas(shapes: Canvas.() -> Unit): Canvas {
     val canvas = Canvas()
+    // use lambda expression with receiver
     canvas.shapes()
     return canvas
 }
