@@ -1,3 +1,5 @@
+package lambdas
+
 object Lambdas {
 
     /*Return from a function
