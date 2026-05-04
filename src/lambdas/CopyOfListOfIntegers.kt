@@ -17,7 +17,10 @@ fun List<Int>.incremented(): List<Int> {
 
 fun main() {
     val originalList = listOf(1, 2, 3)
-    val newList = originalList.incremented()
-    println(newList) // prints object only
-
+    originalList.incremented()
+    /*val newList = originalList.incremented()
+    newList  is not needed as original.incremented naturally prints
+    println(newList)
+    prints [] which is not needed
+    */
 }
