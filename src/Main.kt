@@ -19,9 +19,9 @@ fun main() {
        println()
        Functions.main()
        println()
-       println(Lambdas.urls)
+       println(lambdas.Lambdas.urls)
        println()
-       Lambdas.invokeCustomRepeat()
+       lambdas.Lambdas.invokeCustomRepeat()
        println()
        val employee = Classes.Employee("Osei", 35)
        employee.salary += 10
