@@ -41,3 +41,33 @@ class SmartLight(name: String) :
     }
 
 }
+
+class SmartThermostat(name: String) :
+    SmartDevice(name = name) {
+    override fun turnOn() {
+        println("$name is ON ")
+    }
+
+    override fun turnOff() {
+        println("$name is OFF")
+    }
+
+    fun adjustTemperature(temp: Double) {
+        println("$name is at the Temperature of $temp degrees")
+    }
+}
+
+
+fun main() {
+    SmartLight("Living Room SmartLight").apply {
+        turnOn()
+        turnOff()
+        adjustBrightness(7)
+    }
+    println()
+    SmartThermostat("Bedroom Thermostat").apply {
+        turnOn()
+        turnOff()
+        adjustTemperature(4.6)
+    }
+}
