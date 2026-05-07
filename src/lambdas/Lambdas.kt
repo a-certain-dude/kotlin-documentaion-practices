@@ -22,14 +22,6 @@ fun toSeconds(time: String): (Int) -> Int {
     }
 }
 
-fun main() {
-    val timesInMinutes = listOf(2, 10, 15, 1)
-    val min2sec = toSeconds("minute")
-    val totalTimeInSeconds = timesInMinutes.map(min2sec).sum()
-    println("Total time is $totalTimeInSeconds secs")
-    // Total time is 1680 secs
-}
-
 
 /*Exercise 1
 You have a list of actions supported by a web service,
@@ -66,3 +58,16 @@ fun invokeCustomRepeat() {
     }
 }
 
+fun main() {
+    val timesInMinutes = listOf(2, 10, 15, 1)
+    val min2sec = toSeconds("minute")
+    val totalTimeInSeconds = timesInMinutes.map(min2sec).sum()
+    println("Total time is $totalTimeInSeconds secs")
+    // Total time is 1680 secs
+
+
+    println(urls)
+    println()
+    invokeCustomRepeat()
+
+}

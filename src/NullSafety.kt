@@ -23,3 +23,8 @@ fun salaryById(id: Int): Int {
     return employeeById(id)?.salary ?: 0
 }
 
+fun main(){
+    val salary = salaryById(8)
+    println(salary)
+    println((1..5).sumOf { id -> salaryById(id) })
+}

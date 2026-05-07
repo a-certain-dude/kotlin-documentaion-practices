@@ -1,3 +1,4 @@
+import Functions.intervalInSeconds
 import kotlin.math.PI
 import kotlin.math.pow
 
@@ -30,13 +31,20 @@ object Functions {
     fun intervalInSeconds(hours: Int = 1, minutes: Int, seconds: Int) = //optional parameter of hours
         ((hours * 60) + minutes) * 60 + seconds
 
-    fun main() {
-        println(intervalInSeconds(minutes = 20, seconds = 15)) //named argument & optional argument
-        println(intervalInSeconds(minutes = 0, seconds = 1))
 
-        println(intervalInSeconds(hours = 0, minutes = 1, seconds = 25))
-        println(intervalInSeconds(hours = 2, minutes = 0, seconds = 0))
-        println(intervalInSeconds(hours = 0, minutes = 10, seconds = 0))
-    }
 
+}
+fun main() {
+    println(intervalInSeconds(minutes = 20, seconds = 15)) //named argument & optional argument
+    println(intervalInSeconds(minutes = 0, seconds = 1))
+
+    println(intervalInSeconds(hours = 0, minutes = 1, seconds = 25))
+    println(intervalInSeconds(hours = 2, minutes = 0, seconds = 0))
+    println(intervalInSeconds(hours = 0, minutes = 10, seconds = 0))
+
+
+    println()
+    println(Functions.circleArea(2))
+    println()
+    println(Functions.circleAreaSingleExpression(5))
 }
