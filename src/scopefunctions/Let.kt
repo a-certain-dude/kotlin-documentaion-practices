@@ -1,10 +1,4 @@
 package scopefunctions
-
-class Canvas {
-    fun rect(x: Int, y: Int, w: Int, h: Int) = println("$x,$y,$w,$h,")
-    fun circ(x: Int, y: Int, r: Int) = println("$x,$y,$r,")
-    fun text(x: Int, y: Int, str: String) = println("$x,$y,$str,")
-}
 /*
 Practice
 Exercise 1
@@ -52,11 +46,15 @@ fun convertToEuros(dollars: Double): Double {
 
 fun main() {
     val product = Product()
-    val priceInEuros = product.getPriceInEuros()
-    if (priceInEuros != null) {
-        println("Price in Euros: €$priceInEuros")
-// Price in Euros: €85.0
-    } else {
-        println("Price information is not available.")
+    val priceInEuros = product.getPriceInEurosS()
+
+    /* if (priceInEuros != null)
+         println("Price in Euros: $priceInEuros")
+     else
+         println("Price info not available")
+    */
+    val check = priceInEuros?.let {
+        println("Price in Euros: $it")
     }
+    // check variable can be removed
 }
