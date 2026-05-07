@@ -22,3 +22,9 @@ Use the .lowercase() function for the String type.*/
 
 fun String.toLowerCaseString() = this.lowercase()
 
+fun main() {
+    println(2.isPositive())
+    println((-7).isPositiveCheck())
+    println()
+    println("JOSEPH".toLowerCaseString())
+}
