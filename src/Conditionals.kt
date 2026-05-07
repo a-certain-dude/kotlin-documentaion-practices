@@ -39,3 +39,8 @@ object Conditionals {
     }
 
 }
+
+fun main(){
+    Conditionals.ifCondition()
+    Conditionals.whenCondition()
+}
