@@ -23,13 +23,30 @@ interface Messaging {
     fun receiveMessage(): String
 }
 
-class SmartMessenger : Messaging {
+class BasicClassMessenger() : Messaging {
     override fun sendMessage(message: String) {
-        println("Sending message: $message ")
+        println("Sending a basic message: $message ")
     }
+
     override fun receiveMessage(): String {
         return "Message received"
     }
+
+    fun timeSent() {
+        println("12:00 Anopa N'nsia ")
+    }
 }
 
+class SmartMessenger(val basicMessage: BasicClassMessenger) : Messaging by basicMessage {
+    override fun sendMessage(message: String) {
+        println("Sending a smart message: $message ")
+    }
+}
 
+fun main() {
+    SmartMessenger(BasicClassMessenger()).apply {
+        sendMessage("Kita mu oo, Ama Nketia, wo ho te s3n ?")
+        println(receiveMessage())
+        BasicClassMessenger().timeSent()
+    }
+}
