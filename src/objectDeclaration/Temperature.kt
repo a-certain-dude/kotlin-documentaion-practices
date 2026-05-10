@@ -13,10 +13,15 @@ data class Temperature(val celsius: Double) {
     val fahrenheit: Double = celsius * 9 / 5 + 32
 
     companion object Fahrenheit {
-        fun fromFahrenheit(fahrenheit: Double) {
-            val celsius: Double = fahrenheit * 9 / 5 + 32
+        fun fromFahrenheit(fahrenheit: Double): Temperature {
+            return Temperature(celsius = (fahrenheit - 32) * 5 / 9)
+        }
+
+        fun fromFahrenheitX(fahrenheit: Double) {
+            val celsius: Double = (fahrenheit - 32) * 5 / 9
             println(celsius)
         }
+
     }
 }
 
@@ -33,7 +38,7 @@ fun main() {
 
     val fahrenheit = 90.0
     val temp = Temperature.fromFahrenheit(fahrenheit)
-    println("")
-
+    println(temp)
+    println(Temperature.fromFahrenheitX(fahrenheit))
 
 }
