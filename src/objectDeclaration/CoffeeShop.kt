@@ -11,3 +11,9 @@ interface Order {
     val customerName: String
     val orderTotal: Double
 }
+
+data object OrderOne : Order {
+    override val orderId: String = "001"
+    override val customerName: String = "Joseph"
+    override val orderTotal: Double = 34.1
+}
