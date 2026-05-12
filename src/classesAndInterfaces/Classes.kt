@@ -1,3 +1,5 @@
+package classesAndInterfaces
+
 import kotlin.random.Random
 
 /*
