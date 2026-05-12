@@ -23,6 +23,6 @@ object FlyingSkateBoard : Vehicle {
 
 fun main() {
     println("Name of vehicle:  ${FlyingSkateBoard.name}")
-    println("Name of vehicle:  ${FlyingSkateBoard.move()}")
+    println("Movement of vehicle:  ${FlyingSkateBoard.move()}")
     FlyingSkateBoard.flyingSound()
 }
