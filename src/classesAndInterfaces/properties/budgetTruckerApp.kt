@@ -15,20 +15,21 @@ remainingBudget that prints:
 • An encouraging message when the budget is increased from the previous value.*/
 
 
-class Budget {
-    var remainingBudget: Int by observable(20) { _, initVal, new ->
+class Budget(totalBudget: Int) {
+    var remainingBudget: Int by observable(totalBudget) { _, initVal, new ->
         if (new > 20)
             println("$$initVal Budget has been increased to -> $$new")
         else
             println("Budget of $$initVal decreased to $$new")
     }
-
 }
 
 
 fun main() {
-    Budget().apply {
-        remainingBudget = 2
+    Budget(100).apply {
+        this.remainingBudget = 80
+        this.remainingBudget = 690
+
     }
 
 }
