@@ -17,10 +17,9 @@ class Thermostat {
 
 fun main() {
     Thermostat().apply {
-        temperature = 26.0
-        // Warning: Temperature is too high! (20.4`c -> 26.0`c)
-        temperature = 24.4
-        //Temperature changed: 20.4 -> 24.4
-        temperature = 2.4
+        temperature = 26.0 //temperature with initial value of 20.4 is now here as 26.0
+                           // this triggers a reaction by executing given command
+        temperature = 24.4  // same
+        temperature = 2.4   // same
     }
 }
