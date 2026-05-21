@@ -22,7 +22,7 @@ sealed class Status {
 fun handleStatus(status: Status) {
     when (status) {
         is Status.Loading -> println("Loading......")
-        is Status.OK -> print("Data received  ${status.data}")
+        is Status.OK -> println("Data received  ${status.data}")
         is Status.Error -> when (status.problem) {
             Status.Error.Problem.NETWORK -> println("Network issues")
             Status.Error.Problem.TIMEOUT -> println("Timeout")
@@ -36,5 +36,6 @@ fun handleStatus(status: Status) {
 fun main() {
     handleStatus(status = Status.Loading)
     handleStatus(status = Status.OK(listOf("docx", "pptx", "excl")))
+    handleStatus(status = Status.Error(Status.Error.Problem.NETWORK))
 
 }
