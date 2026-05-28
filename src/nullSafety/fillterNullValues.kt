@@ -13,6 +13,8 @@ val serverConfig: Map<String, String?> = mutableMapOf(
     "appConfig.json" to "App Configuration",
     "dbConfig.json" to null
 )
+const val requestedFile = "appConfig.json"
+val configFiles: List<String> = listOfNotNull(serverConfig[requestedFile])
 
 val numbersToNumerals: Map<Int, String> = mapOf(
     1 to "One",
