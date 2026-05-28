@@ -28,7 +28,9 @@ val numbersToNumerals: Map<Int, String> = mapOf(
     9 to "Nine",
     10 to "Ten",
 )
-
+//If you want to perform filtering of null
+// values directly when creating a list,
+// use the listOfNotNull() function:
 val filterNumbers = listOfNotNull(numbersToNumerals[1])
 
 fun printList(listOfNumbers: MutableList<Int>): MutableList<Int> {
