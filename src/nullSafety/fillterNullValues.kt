@@ -27,6 +27,8 @@ val numbersToNumerals: Map<Int, String> = mapOf(
     10 to "Ten",
 )
 
+val filterNumbers = listOfNotNull(numbersToNumerals[1])
+
 fun printList(listOfNumbers: MutableList<Int>): MutableList<Int> {
     listOfNumbers.add(1)
     listOfNumbers.add(2)
