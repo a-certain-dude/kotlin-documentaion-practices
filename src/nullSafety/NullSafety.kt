@@ -1,4 +1,4 @@
-/*
+package nullSafety/*
 Exercise
 You have the employeeById function that gives you access to a database of employees of
 a company. Unfortunately, this function returns a value of the Employee?
