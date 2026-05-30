@@ -8,4 +8,9 @@ use the reduceOrNull() function
 https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/reduce-or-null.html
 */
 
+fun main() {
+    val pricesOfItems = listOf<Int>(1,7,1,0)
+    val totalPrices = pricesOfItems.reduceOrNull { acc, i -> acc + i }
+    println("Calculated items: ${totalPrices ?: "There are no items"} ")
+}
 
