@@ -48,12 +48,11 @@ fun printList(listOfNumbers: MutableList<Int>): MutableList<Int> {
     return listOfNumbers
 }
 
-const val requestedFile = "appConfig.json"
-val configFiles: List<String> = listOfNotNull(serverConfig["dbConfig.json"])
 
 fun main() {
     println(validEmail)
     println(configFiles)
     println(printList(mutableListOf()))
+    println(filterNumbers)
 }
 
