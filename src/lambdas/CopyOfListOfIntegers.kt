@@ -16,7 +16,7 @@ fun List<Int>.incremented(): List<Int> {
 }
 
 
-/*Correct answer for the Documentation*/
+/*Correct answer from the Documentation*/
 fun List<Int>.incrementX(): List<Int> {
     val originalList = this // this(which is the receiver) is List<Int>
     return buildList {
