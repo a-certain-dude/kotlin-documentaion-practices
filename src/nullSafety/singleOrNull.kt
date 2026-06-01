@@ -12,5 +12,5 @@ fun main() {
     val singleAges = ages.singleOrNull {
         it == 2
     }
-    println(singleAges)
+    println("Single hot day with 30 degrees: ${singleAges?: "None"}")
 }
