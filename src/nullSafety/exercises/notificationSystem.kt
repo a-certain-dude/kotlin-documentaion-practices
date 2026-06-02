@@ -20,4 +20,12 @@ SMS notification preferences only if they are enabled.
 The takeIf() function returns the original value if the given condition is true, otherwise it returns
 null . For example:*/
 
+data class User(val name: String?)
 
+fun getNotificationPreferences(user: Any, emailEnabled: Boolean, smsEnabled: Boolean): List<String> {
+    val validUser = user as? User
+    val userName = validUser?.name ?: "Guest"
+    return listOfNotNull(userName)
+
+
+}
