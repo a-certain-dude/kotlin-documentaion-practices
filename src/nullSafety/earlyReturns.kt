@@ -1,7 +1,5 @@
 package nullSafety
 
-import lambdas.ID
-
 /*
 *Early returns and the Elvis operator
 In the beginner tour, you learned how to use early returns to stop your function from
@@ -24,16 +22,9 @@ fun getNumberOfFriends(users: Map<Int, Users>, userId: Int): Int {
 }
 
 fun main() {
-    val user1 =
-        Users(id = 1, name = "Osei", friends = listOf(1, 4))
-    val user2 =
-        Users(id = 2, name = "Mensah", friends = listOf(4))
-
-    val getNumber =
-        getNumberOfFriends(
-            users = mapOf(1 to user1, 2 to user2),
-            userId = 3
-        )
+    val user1 = Users(id = 1, name = "Osei", friends = listOf(1, 4))
+    val user2 = Users(id = 2, name = "Mensah", friends = listOf(4))
+    val getNumber = getNumberOfFriends(users = mapOf(1 to user1, 2 to user2), userId = 3)
     println(getNumber)
 
 }
