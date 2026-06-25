@@ -16,6 +16,10 @@ data class Users(val userName: String, val isActive: Boolean)
 fun getActiveUsernames(userNames: List<Users>) =
     userNames.mapNotNull { user -> if (user.isActive) user.userName else null }
 
+fun getActiveUsernamesX(userNames: List<Users>) =
+    userNames.mapNotNull { user -> (user.userName).takeIf { user.isActive } }
+
+
 fun main() {
     val someUser =
         listOf(
