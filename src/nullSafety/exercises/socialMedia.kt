@@ -28,6 +28,11 @@ fun main() {
             Users(userName = "Isaac", isActive = false)
         )
 
-    println(getActiveUsernames(userNames = someUser))
+    println(getActiveUsernamesX(userNames = someUser))
     // [Osei, Boakye]
+
+    val x = 2
+
+    val printOut = "Yayyyyy X is equal to $x ".takeIf { x == 2 }
+    println(printOut)
 }
