@@ -1,5 +1,0 @@
-package standardLibrary
-
-fun main() {
-
-}
