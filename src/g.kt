@@ -65,18 +65,20 @@ fun whenExpression(obj: Any): Unit {
     when (obj) {
         1 -> println("one")
         is Long -> println("Is long type")
-        "hell" -> println("Greeting")
-        is String -> println("Is string")
+        "hello" -> println("Greeting")
     }
 
 }
 
-fun collection(): Unit {
+fun collectionX(): Unit {
     val fruits = listOf("orange", "banana", "mangoes")
     when {
         "pineapple" in fruits -> println("pineapple found at index ${fruits.indexOf("pineapple")}")
         "mangoes" in fruits -> println("mangoes found at index ${fruits.indexOf("mangoes")}")
     }
+    fruits.filter { it.contains("a") }
+
+
 }
 
 
@@ -85,9 +87,9 @@ fun main() {
     //ranges()
     //forLoop()
     //whileLoop()
-    whenExpression("Hello")
+    whenExpression("hello")
     whenExpression(1000L)
     whenExpression(1)
-    collection()
+    collectionX()
 
 }
