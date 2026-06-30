@@ -48,4 +48,13 @@ fun forLoop(): Unit {
     for (items in fruits) {
         println(items)
     }
+
+    println(fruits[1])
+
+    for (index in fruits.indices) {
+        println("$index at ${fruits[index]}")
+    }
+
 }
+
+
