@@ -62,10 +62,24 @@ fun whileLoop(): Unit {
 }
 
 
+fun whenExpression(obj: Any): Unit {
+    when (obj) {
+        1 -> println("one")
+        is Long -> println("Is long type")
+        "hell" -> println("Greeting")
+        is String -> println("Is string")
+    }
+
+}
+
+
 fun main() {
 
     //ranges()
     //forLoop()
-    whileLoop()
+    //whileLoop()
+    whenExpression("Hello")
+    whenExpression(1000L)
+    whenExpression(1)
 
 }
