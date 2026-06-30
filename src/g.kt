@@ -1,11 +1,3 @@
-fun main() {
-
-    ranges()
-    forLoop()
-
-}
-
-
 fun ranges() {
 
     // out of range
@@ -44,7 +36,7 @@ fun ranges() {
 }
 
 fun forLoop(): Unit {
-    val fruits = listOf("apple", "banana", "pineaple")
+    val fruits = listOf("apple", "banana", "pineapple")
     for (items in fruits) {
         println(items)
     }
@@ -57,4 +49,23 @@ fun forLoop(): Unit {
 
 }
 
+fun whileLoop(): Unit {
+    val fruits = listOf("apple", "banana", "pineapple")
+    var index = 0
 
+    while (index < fruits.size) {
+        println("$index is at ${fruits[index]}")
+        println(index++)
+        println("\n")
+    }
+
+}
+
+
+fun main() {
+
+    //ranges()
+    //forLoop()
+    whileLoop()
+
+}
