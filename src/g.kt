@@ -58,7 +58,6 @@ fun whileLoop(): Unit {
         println(index++)
         println("\n")
     }
-
 }
 
 
@@ -72,6 +71,14 @@ fun whenExpression(obj: Any): Unit {
 
 }
 
+fun collection(): Unit {
+    val fruits = listOf("orange", "banana", "mangoes")
+    when {
+        "pineapple" in fruits -> println("pineapple found at index ${fruits.indexOf("pineapple")}")
+        "mangoes" in fruits -> println("mangoes found at index ${fruits.indexOf("mangoes")}")
+    }
+}
+
 
 fun main() {
 
@@ -81,5 +88,6 @@ fun main() {
     whenExpression("Hello")
     whenExpression(1000L)
     whenExpression(1)
+    collection()
 
 }
