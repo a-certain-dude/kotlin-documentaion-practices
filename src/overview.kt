@@ -99,6 +99,11 @@ object TypeCheck {
         return null
     }
 
+    fun getStringLengthX(obj: Any): Int? {
+        if (obj !is String) return null
+        return obj.length
+    }
+
     fun printLength(obj: Any) {
         println("Printing the length of '$obj' ${getStringLength(obj = obj) ?: "Type is not string"} ")
         //println("Printing the length of '$obj' ${getStringLength(obj = obj)} ")
