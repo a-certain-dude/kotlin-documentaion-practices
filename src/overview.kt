@@ -1,3 +1,5 @@
+import kotlin.reflect.KClass
+
 fun ranges() {
 
     // out of range
@@ -102,6 +104,11 @@ object TypeCheck {
     fun getStringLengthX(obj: Any): Int? {
         if (obj !is String) return null
         return obj.length
+    }
+
+    fun getStringLengthY(obj: Any): Int? {
+        if (obj is String && obj.length >= 0) return obj.length
+        return null
     }
 
     fun printLength(obj: Any) {
