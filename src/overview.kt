@@ -85,21 +85,25 @@ fun collectionX(): Unit {
 
 }
 
-/*Using the is operator for Type-checking*/
-fun getStringLength(obj: Any): Int? {
+object TypeCheck {
 
-    if (obj is String) {
-        // obj is automatically cast to string in this branch
-        return obj.length
+    /*Using the is operator for Type-checking*/
+    private fun getStringLength(obj: Any): Int? {
+
+        if (obj is String) {
+            // obj is automatically cast to string in this branch
+            return obj.length
+        }
+
+        // obj is still of 'Any' outside the type-checked branch
+        return null
     }
 
-    // obj is still of 'Any' outside the type-checked branch
-    return null
-}
+    fun printLength(obj: Any) {
+        println("Printing the length of '$obj' ${getStringLength(obj = obj) ?: "Type is not string"} ")
+        //println("Printing the length of '$obj' ${getStringLength(obj = obj)} ")
+    }
 
-fun printLength(obj: Any) {
-    println("Printing the length of '$obj' ${getStringLength(obj = obj) ?: "Type is not string"} ")
-    //println("Printing the length of '$obj' ${getStringLength(obj = obj)} ")
 }
 
 fun main() {
@@ -111,7 +115,10 @@ fun main() {
     whenExpression(1000L)
     whenExpression(1)
     collectionX()
-    printLength("NkwantabisaJoseph")
-    printLength(300)
+
+    TypeCheck.apply {
+        printLength("NkwantabisaJoseph")
+        printLength(300)
+    }
 
 }
