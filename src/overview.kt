@@ -71,12 +71,16 @@ fun whenExpression(obj: Any): Unit {
 }
 
 fun collectionX(): Unit {
-    val fruits = listOf("orange", "banana", "mangoes")
-    when {
-        "pineapple" in fruits -> println("pineapple found at index ${fruits.indexOf("pineapple")}")
+    val fruits = listOf("orange", "apple", "banana", "mangoes")
+    /*when {
+        "pineapple" in fruit    s -> println("pineapple found at index ${fruits.indexOf("pineapple")}")
         "mangoes" in fruits -> println("mangoes found at index ${fruits.indexOf("mangoes")}")
-    }
-    fruits.filter { it.contains("a") }
+    }*/
+    fruits
+        .filter { it.startsWith("a") }
+        .sortedBy { it }
+        .map { it.uppercase() }
+        .forEach { println(it) }
 
 
 }
