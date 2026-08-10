@@ -18,7 +18,15 @@ fun main() {
 fun atom() {
     listOf(1, 2, 3, 4, 5).forEach lit@{
         if (it == 3) return@lit // local return to the caller - the foreach lambda
-            println(it)
+        println(it)
     }
-   println("done wit explicit label")
+    println("done wit explicit label")
+}
+
+fun atomX() {
+    listOf(1, 2, 3, 4, 5).forEach {
+        if (it == 3) return@forEach// local return to the caller - the foreach lambda
+        println(it)
+    }
+    println("done wit implicit label")
 }
