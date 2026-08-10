@@ -15,6 +15,20 @@ fun main() {
     atom()
 }
 
+fun foo() {
+    listOf(1, 2, 3, 4, 5).forEach(
+
+        fun(value: Int) {
+            if (value == 3) return // local return to the caller of the anonymous
+                                    // function - the forEach loop
+            print(value)
+        }
+
+    )
+
+    print(" done with anonymous function")
+}
+
 fun atom() {
     listOf(1, 2, 3, 4, 5).forEach lit@{
         if (it == 3) return@lit // local return to the caller - the foreach lambda
