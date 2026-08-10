@@ -1,3 +1,4 @@
+import standardLibrary.pow
 import kotlin.reflect.KClass
 
 fun ranges() {
@@ -132,5 +133,6 @@ fun main() {
         printLength("NkwantabisaJoseph")
         printLength(300)
     }
-
+    val x = 2.pow(7)
+    println(x)
 }
