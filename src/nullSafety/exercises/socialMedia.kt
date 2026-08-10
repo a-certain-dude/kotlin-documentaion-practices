@@ -32,7 +32,6 @@ fun main() {
     // [Osei, Boakye]
 
     val x = 2
-
     val printOut = "Yayyyyy X is equal to $x ".takeIf { x == 2 }
     println(printOut)
 }
