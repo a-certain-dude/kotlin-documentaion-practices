@@ -3,17 +3,19 @@ package exception
 fun main() {
     var someState: String? = null
 
-    fun getSomeState() {
+    fun getSomeState():String {
         val checkState = checkNotNull(someState) {
             "state must be set beforehand"
         }
         check(checkState.isNotEmpty()) {
             "state must be non-empty"
         }
+        return checkState
     }
 
     someState = ""
+    someState = "state-not empty"
 
-    getSomeState()
+    println(getSomeState())
 
 }
