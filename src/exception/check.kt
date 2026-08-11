@@ -4,12 +4,15 @@ fun main() {
     var someState: String? = null
 
     fun getSomeState() {
-//        checkNotNull(someState)
-        check(checkNotNull(someState) { "State must be set beforehand" }.isNotEmpty()) {
+        val checkState = checkNotNull(someState) {
+            "state must be set beforehand"
+        }
+        check(checkState.isNotEmpty()) {
             "state must be non-empty"
         }
     }
 
+    someState = ""
 
     getSomeState()
 
