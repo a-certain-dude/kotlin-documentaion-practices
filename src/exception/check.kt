@@ -5,14 +5,12 @@ fun main() {
 
     fun getSomeState() {
 //        checkNotNull(someState)
-        check(checkNotNull(someState).isNotEmpty()) {
+        check(checkNotNull(someState) { "State must be set beforehand" }.isNotEmpty()) {
             "state must be non-empty"
         }
     }
 
 
-    someState = ""
-
-    someState = "some"
     getSomeState()
+
 }
