@@ -19,3 +19,9 @@ fun getIndices(count: Int): List<Int> {
     require(count >= 0) { "Count must be non-negative. You set count to $count" } // throws an exception with a message
     return List(size = count) { it + 1 }
 }
+
+fun printNonNullString(str: String?) {
+    require(str != null)
+    println(str.length)
+
+}
