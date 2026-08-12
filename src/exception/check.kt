@@ -19,3 +19,8 @@ fun main() {
     println(getSomeState())
 
 }
+
+fun checkString(string: String?){
+    check(string!=null)
+    println(string.length)
+}
