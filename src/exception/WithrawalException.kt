@@ -18,6 +18,27 @@ fun processWithdrawal(amount: Double, availableBalance: Double) {
     println("Withdrawal Processed.")
 }
 
+fun divideOrNull(a: Int): Int {
+
+// The try block is always executed
+// An exception here (division by zero) causes an immediate jump to the catch block
+    try {
+        val b = 44 / a
+        println("try block: Executing division:$b")
+        return b
+    }
+    // The catch block is executed due to the ArithmeticException (division by zero if a ==0)
+    catch (e: ArithmeticException) {
+        println("Catch block: Encountered arithmetic exception $e")
+        return -1
+    } finally {
+        println("finally block: The finally is always executed")
+    }
+
+
+}
+
+
 fun main() {
     val availableFunds = 500.0
     var withdrawalAmount = 500.5
@@ -34,6 +55,8 @@ fun main() {
         println("Caught a WithdrawalException: ${e.message}")
     }
 
+    // Change this value to get a different result. An ArithmeticException will return: -1
+    println(divideOrNull(4))
 
 }
 
