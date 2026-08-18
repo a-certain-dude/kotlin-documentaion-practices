@@ -1,5 +1,7 @@
 package exception
 
+import classesAndInterfaces.Messaging
+
 
 class MockResource {
     fun use() {
@@ -15,7 +17,17 @@ class MockResource {
 
 }
 
+//custom exception, inhering Existing exception class
+class NegativeNumberException : Exception("Parameter is less than zero.")
+class NonNegativeNumberException : Exception("Parameter is above zero.")
+
+fun validateNumber(number: Int) {
+    if (number < 0) throw NegativeNumberException()
+    else if (number >= 0) throw NonNegativeNumberException()
+}
+
 fun main() {
+    validateNumber(1)
 
     val mockRes = MockResource()
     try {
