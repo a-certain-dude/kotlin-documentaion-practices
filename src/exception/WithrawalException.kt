@@ -41,7 +41,7 @@ fun divideOrNull(a: Int): Int {
 
 fun main() {
     val availableFunds = 500.0
-    var withdrawalAmount = 500.5
+    val withdrawalAmount = 500.5
 
     try {
         processWithdrawal(amount = withdrawalAmount, availableBalance = availableFunds)
