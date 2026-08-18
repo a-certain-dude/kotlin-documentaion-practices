@@ -19,8 +19,10 @@ fun main() {
 
     val mockRes = MockResource()
     try {
+        //Attempt to use resources
         mockRes.use()
     } finally {
+        //Ensures resource is always closed even if exception occurs
         mockRes.close()
     }
 
@@ -33,5 +35,6 @@ fun main() {
             close()
         }
     }
-
+    // this line is not printed when exception is thrown
+    println("End of program")
 }
