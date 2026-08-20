@@ -18,6 +18,13 @@ fun processWithdrawal(amount: Double, availableBalance: Double) {
     println("Withdrawal Processed.")
 }
 
+/*
+The returned value of a try expression is determined by the last executed expression in either the try or
+catch block.
+If no exceptions occur, the result comes from the try block; if an exception is handled, it comes
+from the catch block. The finally block is always executed, but it doesn't change the result of the try-
+catch block.*/
+
 fun divideOrNull(a: Int): Int {
 
 // The try block is always executed
