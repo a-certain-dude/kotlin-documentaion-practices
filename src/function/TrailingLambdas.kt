@@ -12,6 +12,7 @@ fun read(b: Int, print: Unit? = println("No argument passed for print.")) {
 
 fun main() {
     read(5)
+    read(5, null)
 
     greeting {
         println("GoodMorning")
