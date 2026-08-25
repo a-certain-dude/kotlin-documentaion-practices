@@ -38,6 +38,10 @@ fun main() {
         mockRes.close()
     }
 
+    /*
+    The following is a bad code, it creates resource leak because two separate
+    object are created and not on the same "track"
+     */
     try {
         MockResource().apply {
             use()
