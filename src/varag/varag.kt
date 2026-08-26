@@ -21,12 +21,15 @@ fun schoolsLoc(vararg desc: String) {
 fun main() {
 
     // the spread operator is used to extract items from an array and pass them individually
-    val nameS = arrayOf("Police", " Depo")
-    schoolsLoc("RC", "EP", "LA", *nameS)
+    val nameS = listOf("Police", "Depo")
+    schoolsLoc("RC", "EP", "LA", *nameS.toTypedArray())
 
     val names = arrayOf("WhanBaNie", "Abba")
+    val number = intArrayOf(24, 45, 59)
     // the spread operator is used to extract items from an array and pass them individually
-    val asL = asList(3, 5, 6, 0, "jose", *names)
+    val asL =
+        asList(3, 5, 6, 0, "jose", *names, *number.toTypedArray())
+
     println(asL)
     mergeSting(alphabet = arrayOf("x", "y", "z"))
 }
