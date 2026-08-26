@@ -10,6 +10,19 @@ fun printHello(name: String?, action: () -> Unit) {
     action()
 }
 
+// declaring the unit type and returning it is verbose
+fun printHelloX(name: String?, action: () -> Unit): Unit {
+    if (name != null)
+        println("Hello $name")
+    else
+        println("Hi there")
+
+    action()
+
+    return Unit
+}
+
+
 fun main() {
     printHello("Maame") {
         println("Program done") // trailing lambdas
