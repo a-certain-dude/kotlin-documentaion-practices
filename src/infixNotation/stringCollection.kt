@@ -1,0 +1,6 @@
+package infixNotation
+
+class MyStringCollection{
+
+
+}
