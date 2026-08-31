@@ -10,8 +10,8 @@ suspend fun main() {
                 delay(2.seconds)
                 println("2sec Child of the enclosing coroutine completed.")
             }
-
-            this.launch {
+            // can still be written without this keyword
+            launch {
                 delay(8.seconds)
                 println("8sec Child coroutine 1 completed.")
             }
