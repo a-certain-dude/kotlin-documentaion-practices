@@ -27,6 +27,11 @@ suspend fun main() {
     }
 }
 /*
+coroutineScope { // this: CoroutineScope
+     // Calls CoroutineScope.launch() where CoroutineScope is the receiver
+    this.launch { println("1") }
+    this.launch { println("2") }
+}
 
 Since no dispatcher is specified in this example, the CoroutineScope.launch() builder
 functions in the coroutineScope() block inherit the current context.
