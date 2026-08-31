@@ -26,3 +26,9 @@ suspend fun main() {
         }
     }
 }
+/*
+
+Since no dispatcher is specified in this example, the CoroutineScope.launch() builder
+functions in the coroutineScope() block inherit the current context.
+If that context doesn't have a specified dispatcher, CoroutineScope.launch() uses Dispatchers.Default ,
+which runs on a shared pool of threads.*/
