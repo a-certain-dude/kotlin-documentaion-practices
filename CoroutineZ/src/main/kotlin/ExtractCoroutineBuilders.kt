@@ -28,18 +28,18 @@ suspend fun main() {
     // the receiver(CoroutineScope)
     // so  coroutineScope becomes a trailing lambda and a DSL-like function call
     withContext(Dispatchers.Default) {
-        println("withContext")
+        println("withContext Thread: ${Thread.currentThread().name}")
         this.launchAll()
     }
 
     coroutineScope {
-        println("coroutineScope")
+        println("coroutineScope Thread: ${Thread.currentThread().name}")
         this.launchAll()
         // launchAll() is called inside coroutineScope{} because launchAll() needs
         // to be called inside a suspending function and coroutineScope{} happens to
         // be a suspending function
     }
-
+    println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     withContext(Dispatchers.Default) {
         println("WithContext Thread: ${Thread.currentThread().name}")
         coroutineScope {
@@ -54,6 +54,6 @@ suspend fun main() {
 
     // the difference between the two is that the withContext lets you define which
     // thread to use
-    // whiles coroutine uses the inherited dispatcher or default if nothing to inherit
+    // whiles coroutineScope uses the inherited thread or default if nothing to inherit
 
 }
