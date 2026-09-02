@@ -10,6 +10,10 @@ suspend fun performBackground() = coroutineScope {
         println("Sending Notification in Background")
     }
 
+    CoroutineScope(Dispatchers.Default).launch {
+        // not used
+    }
+
     // main coroutine continue while a previous suspend
     println("Scope continues")
 }
