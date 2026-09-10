@@ -30,19 +30,25 @@ fun main(): Unit = runBlocking {
     launch {
         channel.send("A1")
         channel.send("A2")
-        println("A done")
+        log("A done")
     }
 
     // start a coroutine
     launch {
         channel.send("B1")
-        println("B done")
+        log("B done")
     }
 
     // start a coroutine
     launch {
-        val x = channel.receive()
-        println("received: $x")
+        repeat(3) {
+            val x = channel.receive()
+            log("received repeated: $x")
+        }
+        val y = channel.receive()
+        log("received single: $y")
+
+        TODO("The last one doesn't run,something is wrong with this code.")
     }
 
 
