@@ -21,6 +21,10 @@ val bufferedChannel = Channel<String>(capacity = 10)
 val conflatedChannel = Channel<String>(capacity = CONFLATED)
 val unlimitedChannel: Channel<String> = Channel(capacity = UNLIMITED)
 
+fun log(message: Any?) {
+    println("${Thread.currentThread().name} : $message")
+}
+
 fun main(): Unit = runBlocking {
 
     // a channel
