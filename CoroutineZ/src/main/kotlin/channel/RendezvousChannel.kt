@@ -49,10 +49,15 @@ fun main(): Unit = runBlocking {
             val x = channel.receive()
             log("received repeated: $x")
         }
-        val y = channel.receive()
-        log("received single: $y")
 
-        TODO("The last one doesn't run,something is wrong with this code.")
+        launch {
+            // works fine when there's no launch{}
+            val y = channel.receive()
+            log("received single: $y")
+
+        }
+
+//        TODO("The last one doesn't run,something is wrong with this code.")
     }
 
 
