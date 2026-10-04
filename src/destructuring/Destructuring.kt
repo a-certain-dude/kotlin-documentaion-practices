@@ -16,6 +16,7 @@ fun main() {
     println(name)
     println(mail)
 
+    val pairArray = arrayOf("apple" to 120, "banana" to 150, "cherry" to 90, "apple" to 140)
 
     //the normal way
     val normalName = user.name
