@@ -12,9 +12,9 @@ fun printAll(alphabet: Collection<String>) {
 
 fun main() {
 
-    val stringAlphabet = listOf("A", "B", "C", "D", "E", "F\n")
-    val setAlphabet = setOf("0", "1", "2", "3", "4", "4")
+    val listOfAlphabet = listOf("A", "B", "C", "D", "E", "F\n")
+    val setOfAlphabet = setOf("0", "1", "2", "3", "4", "4")
 
-    printAllUsingHOF(stringAlphabet)
-    printAll(setAlphabet)
+    printAllUsingHOF(listOfAlphabet)
+    printAll(setOfAlphabet)
 }
