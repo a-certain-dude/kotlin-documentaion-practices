@@ -10,4 +10,11 @@ fun main() {
     println("Access element 1: ${solarElements[1]}")
     println("Positional access using function: \"${solarElements.get(index = 1)}\" ")
 
+    val personA = Person(name = "kwame", age = 24)
+    val personB = Person(name = "kwame", age = 24)
+    val groupOfPersons = listOf<Person>(Person("mensah",34))
+
+    println(personA == personB)
 }
+
+data class Person(val name: String, val age: Int)
