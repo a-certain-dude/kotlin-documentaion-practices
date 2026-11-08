@@ -1,6 +1,6 @@
 package collections
 
-val numbers = listOf("zero", "one", "two", "three", "four", "five")
+val numbers = listOf("atoms", "neutrons", "protons", "quarks", "string", "galaxies")
 
 fun main() {
     println("$numbers")
