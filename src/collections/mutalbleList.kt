@@ -21,6 +21,7 @@ fun main() {
 
     planets.removeAt(planets.size - 1)
     planets.shuffle()
+    planets[7] = Planets("New Planet", 8)
     planets.forEach {
         println(it.name + " " + it.position)
     }
