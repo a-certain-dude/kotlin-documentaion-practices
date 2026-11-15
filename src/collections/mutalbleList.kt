@@ -20,6 +20,7 @@ fun main() {
     println("Removing........" + planets[8])
 
     planets.removeAt(planets.size - 1)
+    planets.shuffle()
     planets.forEach {
         println(it.name + " " + it.position)
     }
