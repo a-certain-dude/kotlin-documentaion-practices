@@ -4,6 +4,7 @@ data class Planets(val name: String, val position: Int)
 
 fun main() {
     val planets = mutableListOf(Planets("Mercury", 1))
+    //   Adding items
     planets.add(Planets("Venu", 2))
     planets.add(Planets("Earth", 3))
     planets.add(Planets("Mars", 4))
@@ -15,5 +16,13 @@ fun main() {
     planets.forEach {
         println(it.name + " " + it.position)
     }
+    // Removing an Item
+    println("Removing........" + planets[8])
+
+    planets.removeAt(planets.size - 1)
+    planets.forEach {
+        println(it.name + " " + it.position)
+    }
+    println("Total elements after removing index 8: ${planets.size}")
 }
 
