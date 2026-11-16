@@ -18,6 +18,7 @@ fun main() {
     }
     // default testing
     // Removing an Item
+    //whow
     println("Removing........" + planets[8])
 
     planets.removeAt(planets.size - 1)
