@@ -16,6 +16,7 @@ fun main() {
     planets.forEach {
         println(it.name + " " + it.position)
     }
+    // default testing
     // Removing an Item
     println("Removing........" + planets[8])
 
