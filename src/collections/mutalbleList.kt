@@ -16,9 +16,7 @@ fun main() {
     planets.forEach {
         println(it.name + " " + it.position)
     }
-    // default testing
     // Removing an Item
-    //whowks
     println("Removing........" + planets[8])
 
     planets.removeAt(planets.size - 1)
