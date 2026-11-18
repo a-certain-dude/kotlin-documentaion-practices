@@ -7,7 +7,12 @@ fun main() {
     if (setOfNumbers.contains(4))
         println("setOfNumbers contains: 4")
 
+    val newSet = setOf(1, 2, 3, 4, 5, 6)
+    println(newSet)
+    println(newSet == setOfNumbers)
+
     val numberBackWards = setOfNumbers.reversed()
     println(numberBackWards)
+    println(setOfNumbers == numberBackWards)
 
 }
